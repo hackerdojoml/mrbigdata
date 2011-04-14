@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+  	
+    <script type="text/javascript">var yoHeadTime = new Date().getTime();</script>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="http://vs1.pbworks.com/shared/statics/packed-m-prod-v42250147.css" />
+
+  
+		<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="http://vs1.pbworks.com/shared/statics/ie6-m-prod-v29276517.css" /><![endif]-->
+      
+      
+  
+  <link rel="canonical" href="http://machinelearningbigdata.pbworks.com/w/file/39050505/awsExample.txt" />
+        	<title>machinelearningbigdata [licensed for non-commercial use only] / awsExample.txt</title>
+</head>
+<body class=" has-ws-nav wikipage firefox firefox3">
+<!-- network bar -->
+<div id="network-bar" class="network-bar clearfix standalone">
+  <ul id="network-bar-breadcrumbs">
+        <li class="last" id="network-crumb-wiki"><a href="/" id="network-crumb-wiki-link">machinelearningbigdata</a></li>
+  </ul>
+
+      <!-- user bar -->
+    <div id="user-bar" class="user-bar "><div class="user-bar-left"><div class="user-bar-right"><p><a href="http://machinelearningbigdata.pbworks.com/w/session/login">log in</a><a id="network-bar-help" class="network-bar-help" target="_new" href="http://usermanual.pbworks.com?wiki=machinelearningbigdata&amp;utm_campaign=wiki-link">help</a></p></div></div></div>
+  
+  
+      <div id="network-bar-signup" class="network-bar-section">
+      <a id="network-bar-signup-link" href="http://pbworks.com/content/edu+overview?utm_campaign=mcgetyourown&utm_source=edu" class="iconbutton upgrade">
+        Get your own free workspace
+      </a>
+    </div>
+  
+  </div>
+
+    <div id="ws-nav" class="chrome-content">
+          <ul class="nav-tabs active-tab-wiki first-tab-active">
+        <li id="ws-nav-wiki" class="active"><a href="http://machinelearningbigdata.pbworks.com/w/page/37651454/FrontPage">Wiki</a></li><li id="ws-nav-browse" class="last"><a href="http://machinelearningbigdata.pbworks.com/w/browse/">Pages &amp; Files</a></li>
+      </ul>
+    
+    <div id="ws-nav-search">
+      <input type="text" placeholder="Search this workspace" class="inputtext text" name="SearchFor" id="input-search"  tabindex="1" title="Search" autocomplete="off"/>
+    </div>
+  </div>
+<div id="wrapper">
+<table id="container" cellspacing="0">
+<tr>
+  <td id="main-content">
+    
+    <div id="page">
+      <div id="page-toolbar">
+        <div id="page-toolbar-inner">
+          <div id="view-tab" class="active">View</div>
+                      <div id="edit-tab" class="editfile"><a href="http://machinelearningbigdata.pbworks.com/w/file/fetch/39050505/awsExample.txt">Download</a></div>
+          					<div id="expand-collapse-page"><a id="expand-collapse-page-link" href="javascript:void(0);"></a></div>
+        </div>
+      </div>
+
+            
+      <table cellspacing="0" id="inner-page">
+        <tr>
+          <td id="page-col-1" width="4">&nbsp;</td>
+          <td id="page-col-2">
+                          <div id="wikicontent">
+<h1 class="pagetitle box">
+      awsExample.txt
+  </h1>
+    <div class="page-history">
+      <a href="http://machinelearningbigdata.pbworks.com/w/browse/#view=ViewFileRevision&amp;param=awsExample.txt" class="iconbutton historyicon">
+      File history
+    </a>
+        uploaded
+    by <span id="page-editor"><a href="javascript:alert('Please join this workspace to see more details about this user.');" class="iconbutton usericon usercard_trigger">mike@mbowles.com</a></span> <span id="page-history-ago">12 hours, 24 minutes ago</span>
+      <div id="new-revision-available"></div>
+  </div>
+  
+  <div id="lockinfo">
+    </div>
+
+  <div id="wikipage" class="box wikistyle">
+  <div id="wikipage-inner">
+    <div class="file-preview"><pre class="file-preview-inner">1.  Create a new bucket.  You can think of a bucket as a drive.  Pick a name for your bucket - mvBucket
+2. Now once you have created a new bucket create two new folders - one to hold the python code - mvCode and the other to hold the input file - mvInput.  We are going to upload the Python mapper and reducer files to the folder called: mvCode.  The other folder mvInput will hold the input to our Hadoop job.  
+3. Upload the file inputFile.txt to the folder mvInput in the bucket: mvBucket.   
+4. Upload the files: mapper.py and reducer.py to the folder mvCode in the bucket: mvBucket.  
+
+
+Now we have all the files uploaded we are ready to launch our first Hadoop job on multiple machines. 
+
+ 
+
+5. Click on the tab that says: Elastic MapReduce.  Next click on the button that says: “Create New Job Flow”.  Name the job flow meanVar001.  Below that are two check boxes and a drop down box.  Check the radio button that says: Run your own application.  On the pull-down menu that says: “Choose a Job Type” select: Streaming, then hit the continue button. 
+
+ 
+
+6. This step is where you give the input arguments to Hadoop, it is very important that you put get these settings correct otherwise your job will fail.  Enter the values in the following fields (be sure to include the quotes):
+Input Location*:mvBucket/mvInput/inputFile.txt
+Output Location*: mvBucket/meanVar001Log
+Mapper*: &quot;python s3n://mvBucket/mvCode/mapper.py&quot;
+
+ 
+
+Reducer*: &quot;python s3n://mvBucket/mvCode/reducer.py&quot;
+You can leave the Extra Args field blank, this is where you would specify extra arguments such as restricting the number of reducers, etc.
+
+ 
+
+7. The next window is the configure EC2 Instances window.  This is where you specifiy the number of servers that will crunch your data. The default is two you can change it to one.  You can also specify the type of EC2 instance you want to use.  You can use a more powerful machine with larger memory, however it will cost more.  In practice big jobs are usually run on “Large” (or better) instances.  Please refer to http://aws.amazon.com/ec2/#instance for more details.  For this trivial demonstration you can use one “small” machine.  Make sure you enable logging, and for the Amazon S3 
+
+
+simple-example/meanCode/mapper.py
+simple-example/meanInput/Input.txt
+</pre></div>
+    <div class="secondarypagetoolbar" id="secondary-toolbar">
+    </div>
+  </div>
+</div>
+</div>
+<style> div#comments .comment { margin-bottom:5px; } div#comments .content p { margin-bottom:5px; }  </style><div id="comments" class="box nocomments">
+<div class="comments-header">
+  <div class="corner4px top"><div class="right"></div><div class="left"></div></div>
+  <h3>
+    Comments (<span id="comments-count">0</span>)
+      </h3>
+  <a name="comments"></a>
+  <div class="corner4px bot"><div class="right"></div><div class="left"></div></div>
+</div>
+      <form id="comment-form" class="comment-form" action="#" method="post">
+      <label>Add a comment</label>
+      <textarea class="text" rows="4" name="comment" id="comment-form-value" ></textarea>
+      <input type="submit" name="" value="Add comment" id="comment-form-add" class="primarybutton add-comment-button"/>
+    </form>
+        <form id="comment-form-reply" class="comment-form" action="#" method="post" style="display:none;margin-left:35px;" >
+      <textarea class="text" rows="4" id="comment-form-reply-value" name="comment"></textarea>
+      <input type="submit" name="" value="Add reply" class="add-comment-button" class="primarybutton"/>
+      <input type="hidden" name="parent" value="0" id="parentcomment" />
+    </form>
+
+    <script> 
+          function reply_to_comment(ts) {
+            $('commentnum'+ts).appendChild($('comment-form-reply'));
+            $('comment-form-reply').style.display = '';
+            $('comment-form-reply-value').setAttribute('parent_ts', ts);
+            $('comment-form-reply-value').value = '';
+            $('comment-form-reply-value').style.backgroundColor='#eee';
+            $('comment-form-reply-value').focus();
+            $('parentcomment').value=ts;
+          }
+          function reply_to_comment_based_on_url() {
+            if(window.location.hash.indexOf('#cr')==0) {
+             var ts = window.location.hash.substr(3);
+             if(ts) {
+              reply_to_comment(ts);
+             }
+            }
+           }
+          reply_to_comment_based_on_url();
+        </script>
+    
+  </div>
+</div>
+<div id="page-bottom-toolbar">
+</div>
+
+<!--[if IE]>
+  <style type="text/css" media="screen">
+    div#sendalink_to_container div.accontainer { left: 122px; margin-top: 20px; }
+    input#sendalink_to { margin-bottom: 7px; }
+    div#sendalink_to_container div#header, div#sendalink_to_container ul, div#sendalink_to_container div#footer { display: inline-block; }
+  </style>
+<![endif]-->                      </td>
+          <td id="page-col-3" width="4">&nbsp;</td>
+        </tr>
+      </table>
+      <div id="page-footer">
+        <div class="header">
+          <div class="rt"></div>
+          <div class="lt"></div>
+        </div>
+        <div class="content"><div id="footer-logo" ><a href="http://pbworks.com/?utm_campaign=wiki-link" title=""></a></div>
+
+<div id="footer-pbwiki">
+  <p>
+    <strong><a href="https://pbworks.com/?utm_campaign=wiki-link">PBworks</a> <a href="http://releases.pbworks.com/">Release #550</a></strong> / <a target="_new" href="http://usermanual.pbworks.com?wiki=machinelearningbigdata&utm_campaign=wiki-link">Help</a><br/>
+    <a href="http://pbworks.com/content/termsofservice?utm_campaign=wiki-link">Terms of use</a> / <a href="http://pbworks.com/content/privacypolicy?utm_campaign=wiki-link">Privacy policy</a>
+  </p>
+</div>
+<div id="footer-about">
+  <p>
+        <strong>About this workspace</strong>
+            <br/>
+    <a href="/w/contact-owner">Contact the owner</a> /         <a href="/rss.xml">RSS feed</a> /     This workspace is <strong>public</strong>
+  </p>
+</div>
+</div>        <div class="footer">
+          <div class="lt"></div>
+          <div class="rt"></div>
+        </div>
+      </div>
+    </div><!--- /#page -->
+
+  </td>
+  <td id="side-content">
+      <div id="sidebar">
+    <div id="side-toolbar" class="sidebox">
+      <ul id="main-tools" class="empty">
+                                      </ul>
+      
+    </div><!-- /#side-toolbar -->
+      <div id="sidebarModules">
+      
+            
+      
+              <div class="wikicontext-module sidebox folders" id="module-folders">
+  <div class="header"><h3 id="module-title-folders">Navigator</h3><a href="javascript:void(0);" class="close togglemodule">&nbsp;</a></div>  <div class="content wikistyle" style="height: 200px;">
+        <div class="loading" id="navigator_loading_message">Loading&hellip;</div>
+  </div>
+<div class="footer resizeable">&nbsp;</div>
+</div>                <div class="wikicontext-module sidebox sidebar" style="display: none;" id="module-sidebar">
+  <div class="header"><h3 id="module-title-sidebar">SideBar</h3><a href="javascript:void(0);" class="close togglemodule">&nbsp;</a></div><div class="footer">&nbsp;</div>
+</div>                            <div class="wikicontext-module sidebox recentactivity" id="module-recentactivity">
+  <div class="header"><h3 id="module-title-recentactivity">Recent Activity</h3><a href="javascript:void(0);" class="close togglemodule">&nbsp;</a></div>  <div id="new-recent-activity" style="display: none;">
+    <a id="new-recent-activity-refresh" href="#">
+      Show <span id="new-recent-activity-count">0</span> new item<span id="new-recent-activity-plural">s</span>
+    </a>
+  </div>
+  <div class="content" style="height: 364px;">
+        <div class="loading" id="recentactivity_loading_message">Loading&hellip;</div>
+  </div>
+<div class="footer resizeable">&nbsp;</div>
+</div>            </div>
+    </div>  </td>
+  </tr>
+
+</table>
+</div>
+      <script>
+  PBinfo = {"CurrentPage":{"isDev":false,"sessCookie":"ds3","requesttime":"1302798738","page":false,"editor_v3":true,"folder":"AWS MeanVar"},"CurrentWiki":{"front_page":"FrontPage","isPublic":true,"debug":false,"usercount":"1","filecount":21,"pagecount":9,"name":"machinelearningbigdata","title":"machinelearningbigdata","cat":"edu","requestaccess":true},"CheckPermissions":{"uid":false},"GetFeatures":{"files2":true,"revcomments":true,"editor_images":true,"fliqz_upsell":true,"twitter":true,"classroom_accounts":true},"GetTimes":{"_valid_as_of":"1302798738","commenttime":1299878456,"filetime":1302754081,"foldertime":1302730110,"page_list_time":1302731148,"pagetime":1302732463,"permtime":1302761082,"tagtime":0,"_args":{"op":"GetTimes"}},"GetUserPrefs":{"sidebar":{"folders":[],"sidebar":[],"addusers":[],"recentactivity":[]},"sidebar_collapsed":false},"BuildTime":1302655784,"object_types":"folder,file","CurrentFile":{"name":"awsExample.txt","isUploader":false},"CurrentObject":39050505};
+</script>
+<script type="text/javascript" src="http://vs1.pbworks.com/shared/statics/libraries-v78374269.js"></script>
+<script type="text/javascript" src="http://vs1.pbworks.com/shared/statics/packed-v77651548.js"></script>
+<script type="text/javascript" src="http://vs1.pbworks.com/shared/statics/extras-v81302550.js"></script><!--[if lte IE 6]>
+  <script type="text/javascript">function ie6minwidth(){var size = (document.documentElement.clientWidth<960 ? '960px' : '100%'); $(document.body).setStyle({'width':size});} document.observe("dom:loaded", ie6minwidth); Event.observe(window, 'resize', ie6minwidth); </script>
+<![endif]-->    <!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qacct="p-16CGFkiSpdTEU";quantserve();</script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-16CGFkiSpdTEU.gif" style="display: none" height="1" width="1" alt="Quantcast"/></noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  (function() {
+    var reportTimeSegment = function(index, name, start, end, scope) {
+      if ((start && end) && (end-start > 0)) {
+        var distance = Math.round( (end-start)/100 )*100;
+        _gaq.push(["_setCustomVar", index, name, distance, scope]);
+      }
+    };
+    var onLoadHandler = function() {
+      var onLoadTime = new Date().getTime();
+      reportTimeSegment(1, "headToOnLoad", yoHeadTime, onLoadTime, 3);
+      var webTiming = ( window.msPerformance ||
+                        window.webkitPerformance ||
+                        window.mozPerformance );
+      if (webTiming && webTiming.timing) {
+        var navTime = webTiming.timing.navigationStart || null;
+        var responseEndTime = webTiming.timing.responseEnd || null;
+        reportTimeSegment(2,"navToResponseEnd", navTime, responseEndTime, 3);
+        reportTimeSegment(3,"navToOnLoad", navTime, onLoadTime, 3);
+      }
+      _gaq.push(["_setAccount","UA-2694787-12"],
+                ["_setDomainName", ".pbworks.com"],
+                ["_setAllowHash", false]);
+      if (document.cookie.match(/hm=/)) {
+        _gaq.push(["_setVar","authenticated"]);
+      }
+      _gaq.push("_trackPageview");
+    };
+    if (!window.addEventListener) {
+      window.attachEvent("onload", onLoadHandler);
+    } else {
+      window.addEventListener("load", onLoadHandler, false);
+    }
+    var ga = document.createElement('script');
+    ga.type = "text/javascript"; 
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga,s);
+  })();
+</script>
+</body>
+</html><!-- v=2,utz=x,ssl=0,ua=Lin-Firefox-3,uid=0,sn=34973,pid=13135,hn=sf30,nw=0,w=machinelearningbigdata,pv=pub,pkg=p20,perm=none,crea=1299878433,mt=1302732463,sc=38,cl=1,cat=edu,mpu=6,NQsid=1,Nmc=176,Ncd=0.0002,Nkb=5,Nct=0.0162,Ncl=1302665426.7614,Nwc=88,Nwt=1302754081.8367,sid=37651443,Ncih=2,Ncif=1,te=0.090 -->
