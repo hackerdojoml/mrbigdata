@@ -51,5 +51,5 @@ Directory structure:
 To avoid conflicts in merges, we should work the class stuff off different dirs:
 
 src/classes/class<n> : source code for class work (only Tricia/Mike write into this)
-src/homeworks/group<m>/week<k> : Source code for homework submissions
+src/homeworks/group<m>/week<k>/submissions : Source code for homework submissions
 src/homeworks/group<m>/<username> : scratch space for <username>
