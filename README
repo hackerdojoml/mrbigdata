@@ -33,7 +33,7 @@ To add files:
 4. git add *
 5. git commit -am '<Commit mssg>'
 6. git push origin master
-7. <Optional> Send pull request
+7. <Optional> Send pull request(http://help.github.com/pull-requests/) 
 
 
 To get other people's homework submissions:
