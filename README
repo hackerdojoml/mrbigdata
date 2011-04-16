@@ -1,3 +1,55 @@
-Soource code for the HackerDojo machine learning + big data class(url):
+Source code for the HackerDojo machine learning + big data class(url):
 
 http://machinelearningbigdata.pbworks.com/w/page/37651454/FrontPage
+
+
+Steps for student (Steps 1-3 are first time only):
+
+Setting up:
+1. Get a github account
+2. Set up git (Documentation on github.com) At the end of this, you should be able to authenticate with github doing ssh git@github.com
+3. Fork the hackerdojoml/mrbigdata.git repository (http://help.github.com/fork-a-repo/)
+
+Making changes:
+4. Make your changes (only in the relevant directories: below)
+5. cd <top_of_tree>; git add *
+6. git commit -am '<Commit mssg>'
+7. git push origin master (at this point, you should be able to see the changes on github.com/<username>/repo)
+8. Send pull request to hackerdojoml (http://help.github.com/pull-requests/)
+
+To pull in upstream changes:
+1. git remote add upstream git://github.com/hackerdojoml/mrbigdata.git   <Only the first time>
+2. git fetch upstream
+3. git merge upstream/master
+
+NOTE: You only have to do this if you want to contribute directly to hackerdojoml, a much better model is if each group collaborates with each other and elects a leader who collaborates with hackerdojoml, but its a little more complicated, and I am _not_ writing the instructions for that :) 
+
+Steps for teacher:
+
+To add files:
+1. cd <relevant_dir>;
+2. Make changes, including adding, copying, modifying files)
+3. cd <top_of_branch>;  (ls >> src,README)
+4. git add *
+5. git commit -am '<Commit mssg>'
+6. git push origin master
+7. <Optional> Send pull request
+
+
+To get other people's homework submissions:
+1. Sign in as hackerdojoml
+2. Go to https://github.com/hackerdojoml/mrbigdata/pulls
+3. Pull in all the changes (eg, if you see a request from debnathsinha, do...)
+3.1 git remote add debnathsinha git://github.com/hackerdojoml/mrbigdata.git    <first time only>
+3.2 git fetch debnathsinha
+3.3 git merge debnathsinha/master
+4. Close the pull request
+
+
+
+Directory structure:
+To avoid conflicts in merges, we should work the class stuff off different dirs:
+
+src/classes/class<n> : source code for class work (only Tricia/Mike write into this)
+src/homeworks/group<m>/week<k> : Source code for homework submissions
+src/homeworks/group<m>/<username> : scratch space for <username>
