@@ -1,0 +1,210 @@
+{
+    "impression": {
+        "extra": {
+            "candidate_scores": {
+                "category": 0.29999999999999999,
+                "score_final": 0.46801499999999996,
+                "score_mixed": 0.46801499999999996,
+                "freshness": 0.5,
+                "place": 0.0,
+                "ecpm": 1.0,
+                "location": 0.0001
+            },
+            "is_billable": true
+        },
+        "salesperson_id": 559,
+        "ad_type": "announcement",
+        "impresssion_id": "e26ad2b87823e437",
+        "program": "CPC",
+        "candidate_id": 200587,
+        "scorer": "remnant",
+        "position": 0,
+        "content_id": 453333,
+        "max_price": [
+            "USD",
+            200
+        ],
+        "win_criteria": {
+            "category": "localservices"
+        }
+    },
+    "billable_impression": true,
+    "billable_click": true,
+    "billable_click_reason": "Valid",
+    "billable_impression_reason": "Valid",
+    "opportunity": {
+        "ad_delivery_end_time": 1287590760,
+        "slot": "default",
+        "omitted_ad_campaign_ids": [
+            275673
+        ],
+        "user_id": null,
+        "server_name": "web22",
+        "extra": {
+            "category_match_scores": {
+                "952": 1.0
+            },
+            "candidate_scores": {
+                "249881": {
+                    "score_final": 0.45665577669902907
+                },
+                "200587": {
+                    "score_final": 0.46801499999999996
+                }
+            },
+            "clobber": false,
+            "bounding_box": [
+                34.04146647222268,
+                -117.58583401408127,
+                34.02327352777732,
+                -117.60390798591872
+            ],
+            "user_agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDS; InfoPath.3)",
+            "from_user": true,
+            "flow_details": {
+                "biz_id": 29189212
+            }
+        },
+        "flow": "biz_details",
+        "hostname": "www.yelp.com",
+        "experiment_ids": [
+            [3, 0],
+            [8, 1],
+            [9, 1],
+            [11, 0],
+            [12, 0],
+            [13, 1],
+            [14, 0],
+            [15, 0]
+        ],
+        "uri": "/biz/faya-corp-ontario",
+        "opportunity_id": "e26ad2b87823e437",
+        "unique_visitor_id": "8736EBF41991A28A",
+        "unique_visitor_first_time": 1287590730.225801,
+        "new_unique_visitor": false,
+        "unique_request_id": "e26ad2b87823e437",
+        "location": {
+            "city": "Ontario",
+            "max_latitude": null,
+            "min_longitude": null,
+            "neighborhood": "",
+            "accuracy": 8.0,
+            "zip": "91761",
+            "max_longitude": null,
+            "address1": "2330 S Archibald Ave",
+            "address2": "",
+            "address3": "",
+            "longitude": -117.594871,
+            "min_latitude": null,
+            "county": "",
+            "latitude": 34.03237,
+            "state": "CA",
+            "poly": null,
+            "country": "US",
+            "unformatted": "",
+            "borough": "",
+            "display": "",
+            "usingDefaultZip": false
+        },
+        "site": "main",
+        "ad_delivery_start_time": 1287590760,
+        "ad_source": "yelp",
+        "headers_in": [
+            [
+                "Accept",
+                "image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*"
+            ],
+            [
+                "Referer",
+                "http://www.yelp.com/biz_photos/CurvFtSsqD5hZhJY5rqQOQ?select=RyQM6Qa3YH_OYrVLs1RCnw"
+            ],
+            [
+                "Accept-Language",
+                "en-US"
+            ],
+            [
+                "User-Agent",
+                "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDS; InfoPath.3)"
+            ],
+            [
+                "Accept-Encoding",
+                "gzip, deflate"
+            ],
+            [
+                "Host",
+                "www.yelp.com"
+            ],
+            [
+                "Connection",
+                "Keep-Alive"
+            ],
+            [
+                "Cookie",
+                "yuv=3EbnPRj7vD854oqowNvbKyp6TAX-WATbaN7ZNtV2q4Yc6iZMuXEYslXJyMm-3PfWi6DXqmALnZNRjb5Mk9UX6lvmtvvxddAv; recentlocations=; location=Los%20Angeles%2C%20CA; __gads=ID=5f501c3804a82d31:T=1287590731:S=ALNI_Ma0OGjkku2YjOYdpBj4xCg_hjFvWQ; gamtarget=%7B%22chase1%22%3A+1287597932%7D; __utma=165223479.1053768050.1287590730.1287590730.1287590730.1; __utmb=165223479.16.9.1287590744544; __utmc=165223479; __utmz=165223479.1287590730.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=; km_lv=1287590757; searchPrefs=%7B%22seen_pop%22%3A%20false%2C%20%22seen_crop_pop%22%3A%20false%2C%20%22prevent_scroll%22%3A%20false%2C%20%22maptastic_mode%22%3A%20false%2C%20%22mapsize%22%3A%20%22small%22%2C%20%22rpp%22%3A%2010%7D; js_track=%7B%22element_id%22%3A%20null%2C%20%22element_label%22%3A%20%22Faya%20Corp%3A%22%2C%20%22pointer_x%22%3A%2052%2C%20%22pointer_y%22%3A%20169%2C%20%22clicked_uri%22%3A%20%22http%3A%2F%2Fwww.yelp.com%2Fbiz%2Ffaya-corp-ontario%22%2C%20%22ref_unique_request_id%22%3A%20%222a1493c0a546120f%22%2C%20%22timestamp%22%3A%201287590758854%7D"
+            ]
+        ],
+        "remote_ip": "72.67.86.42"
+    },
+    "click": {
+        "user_id": null,
+        "opportunity_request_id": "e26ad2b87823e437",
+        "server_name": "web28",
+        "extra": {
+            "user_agent": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDS; InfoPath.3)",
+            "from_user": true
+        },
+        "timestamp": 1287590881.52232,
+        "hostname": "www.yelp.com",
+        "experiment_ids": [
+            [3, 0],
+            [8, 1],
+            [9, 1],
+            [11, 0],
+            [12, 0],
+            [13, 1],
+            [14, 0],
+            [15, 0]
+        ],
+        "unique_visitor_id": "8736EBF41991A28A",
+        "new_unique_visitor": false,
+        "is_valid": true,
+        "unique_request_id": "cd4aa3748bb5a027",
+        "unique_visitor_first_time": 1287590730.225801,
+        "redirect_url": "http://www.yelp.com/biz/vm-tech-chino-2",
+        "headers_in": [
+            [
+                "Accept",
+                "image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*"
+            ],
+            [
+                "Referer",
+                "http://www.yelp.com/biz/faya-corp-ontario"
+            ],
+            [
+                "Accept-Language",
+                "en-US"
+            ],
+            [
+                "User-Agent",
+                "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MDDS; InfoPath.3)"
+            ],
+            [
+                "Accept-Encoding",
+                "gzip, deflate"
+            ],
+            [
+                "Host",
+                "www.yelp.com"
+            ],
+            [
+                "Connection",
+                "Keep-Alive"
+            ],
+            [
+                "Cookie",
+                "yuv=3EbnPRj7vD854oqowNvbKyp6TAX-WATbaN7ZNtV2q4Yc6iZMuXEYslXJyMm-3PfWi6DXqmALnZNRjb5Mk9UX6lvmtvvxddAv; recentlocations=; location=Los%20Angeles%2C%20CA; __gads=ID=5f501c3804a82d31:T=1287590731:S=ALNI_Ma0OGjkku2YjOYdpBj4xCg_hjFvWQ; gamtarget=%7B%22chase1%22%3A+1287598008%7D; __utma=165223479.1053768050.1287590730.1287590730.1287590730.1; __utmb=165223479.24.9.1287590814110; __utmc=165223479; __utmz=165223479.1287590730.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmv=; km_lv=1287590814; searchPrefs=%7B%22seen_pop%22%3A%20false%2C%20%22seen_crop_pop%22%3A%20false%2C%20%22prevent_scroll%22%3A%20false%2C%20%22maptastic_mode%22%3A%20false%2C%20%22mapsize%22%3A%20%22small%22%2C%20%22rpp%22%3A%2010%7D; js_track=%7B%22element_id%22%3A%20null%2C%20%22element_label%22%3A%20%22read%20more%20%C2%BB%22%2C%20%22pointer_x%22%3A%20595%2C%20%22pointer_y%22%3A%20598%2C%20%22clicked_uri%22%3A%20%22http%3A%2F%2Fwww.yelp.com%2Fadredir%3Frequest_id%3De26ad2b87823e437%26redirect_url%3Dhttp%253A%252F%252Fwww.yelp.com%252Fbiz%252Fvm-tech-chino-2%253Fsrc_request_id%253De26ad2b87823e437%2526src_adid%253DRWp2LQqgpL25L3v-TPqc_Q%2526country%253DUS%2526flow%253Dbiz_details%2526ad_type%253Dannouncement%2526from_biz%253DCurvFtSsqD5hZhJY5rqQOQ%26signature%3D520ec069a28a1dab2177107e6517256e6bbd4a97e3a564c4c9b3c33a513dc7fb%22%2C%20%22ref_unique_request_id%22%3A%20%22e26ad2b87823e437%22%2C%20%22timestamp%22%3A%201287590879470%7D"
+            ]
+        ],
+        "remote_ip": "72.67.86.42"
+    }
+}
