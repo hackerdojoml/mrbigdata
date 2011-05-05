@@ -50,7 +50,7 @@ def main():
     
     
     #Begin iteration to calculate coefficient path
-    for i in range(100):
+    for i in range(200):
         #run one iteration
         mrJob2 = MrGlmRegIter(args=[filePath])
         with mrJob2.make_runner() as runner:
